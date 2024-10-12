@@ -25,9 +25,10 @@
             int kmFinali = Convert.ToInt32(km);
 
             // calcolo importo complessivo del noleggio
-            double importoTotale = (kmFinali - kmIniziali)*costoKilometrico;
+            int kmPercorsi = (kmFinali - kmIniziali);
+            double importoTotale = kmPercorsi*costoKilometrico;
 
-            Console.WriteLine($"Caro {nome} il tuo importo complessivo da pagare è {importoTotale}");
+            Console.WriteLine($"Caro {nome} il tuo importo complessivo da pagare è {importoTotale} per un totale di {kmPercorsi} km");
 
         }
     }
